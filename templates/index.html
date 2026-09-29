@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="icon">📡</div>
+  <div><h1>IoT Assistant</h1><p>IoT • Sensors • ESP32 • Arduino • MQTT • Smart Systems</p></div>
+  <span class="online">● Online</span>
+</header>
+<main id="chat">
+  <div class="welcome">
+    <div class="big">🤖</div>
+    <h2>Welcome to IoT Assistant</h2>
+    <p>Ask questions about IoT, sensors, microcontrollers, communication protocols and IoT projects.</p>
+    <div class="chips">
+      <button data-q="What is IoT?">What is IoT?</button>
+      <button data-q="How does MQTT work?">How does MQTT work?</button>
+      <button data-q="How do I connect DHT11 to ESP32?">DHT11 + ESP32</button>
+      <button data-q="Give me a smart agriculture IoT project idea.">Smart Agriculture</button>
+    </div>
+  </div>
+</main>
+<div id="typing" hidden>IoT Assistant is thinking...</div>
+<form id="form">
+  <textarea id="input" rows="1" placeholder="Ask an IoT question..."></textarea>
+  <button type="submit">➤</button>
+</form>
+<p class="note">IoT-focused assistant • Coding is supported only when directly related to IoT.</p>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
